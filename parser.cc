@@ -19,6 +19,7 @@
 #include <cstdio>
 #include <cstring>
 #include "grammar.h"
+#include <Magick++.h>
 
 using namespace std;
 
@@ -40,6 +41,7 @@ int main(int argc, char *argv[]) {
   Grammar gram(argv[1]);
 
   //Load sample
+  Magick::InitializeMagick(nullptr);
   Sample m(argv[2]);
     
   //Print sample information
